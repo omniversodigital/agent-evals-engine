@@ -16,22 +16,22 @@ Built to solve the critical production problem: **How do you mathematically and 
 ```mermaid
 flowchart TD
     subgraph Input
-        GD[Golden Dataset <br/> Edge-Cases & Scenarios]
-        PA[Prompt v1 <br/> Baseline]
-        PB[Prompt v2 <br/> Challenger]
+        GD["Golden Dataset <br/> Edge-Cases & Scenarios"]
+        PA["Prompt v1 <br/> Baseline"]
+        PB["Prompt v2 <br/> Challenger"]
     end
 
     subgraph Evaluation Pipeline
-        Runner[Agent Execution Engine]
-        DetEval[Deterministic Evaluator <br/> Guardrails & Token Bounds]
-        SemJudge[LLM-as-a-Judge <br/> Rubric & Empathy Scoring]
+        Runner["Agent Execution Engine"]
+        DetEval["Deterministic Evaluator <br/> Guardrails & Token Bounds"]
+        SemJudge["LLM-as-a-Judge <br/> Rubric & Empathy Scoring"]
     end
 
     subgraph Analytics & Decision
-        Score[Composite Scoring Engine <br/> Acc: 35%, Tone: 25%, Conv: 25%, Guard: 15%]
-        RegCheck{Regression Gatekeeper}
-        Report[Markdown / JSON Audit Report]
-        CICD[CI/CD Exit Code: 0 (Pass) / 1 (Blocked)]
+        Score["Composite Scoring Engine <br/> Acc: 35%, Tone: 25%, Conv: 25%, Guard: 15%"]
+        RegCheck{"Regression Gatekeeper"}
+        Report["Markdown / JSON Audit Report"]
+        CICD["CI/CD Exit Code: 0 Pass / 1 Blocked"]
     end
 
     GD --> Runner
@@ -42,8 +42,8 @@ flowchart TD
     DetEval --> Score
     SemJudge --> Score
     Score --> RegCheck
-    RegCheck -->|No Regressions & Delta > 0| Report
-    RegCheck -->|Regressions Detected| CICD
+    RegCheck -->|"No Regressions & Delta > 0"| Report
+    RegCheck -->|"Regressions Detected"| CICD
     Report --> CICD
 ```
 
