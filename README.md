@@ -1,5 +1,6 @@
 # 🛡️ Agent Evals Engine
 
+[![CI Pipeline](https://github.com/omniversodigital/agent-evals-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/omniversodigital/agent-evals-engine/actions)
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code Style: Ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://github.com/astral-sh/ruff)
@@ -66,7 +67,7 @@ flowchart TD
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/agent-evals-engine.git
+git clone https://github.com/omniversodigital/agent-evals-engine.git
 cd agent-evals-engine
 
 # Create virtual environment
