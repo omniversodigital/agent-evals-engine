@@ -1,15 +1,26 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "agent-evals-engine"
-version = "0.1.0"
+version = "1.0.0"
 description = "Production-grade evaluation & regression testing framework for conversational AI agents (WhatsApp/CRM)"
 readme = "README.md"
 authors = [{ name = "Jean Carlo Ferreira", email = "jeancarlof@gmail.com" }]
 license = { text = "MIT" }
 requires-python = ">=3.10"
+keywords = ["llm", "evaluations", "ai-agents", "benchmarking", "safety", "pydantic", "whatsapp", "crm"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Testing",
+]
 dependencies = [
     "pydantic>=2.6.0",
     "rich>=13.7.0",
@@ -21,10 +32,21 @@ dependencies = [
 dev = [
     "pytest>=8.0.0",
     "pytest-cov>=4.1.0",
+    "build>=1.0.0",
+    "twine>=5.0.0",
 ]
+
+[project.urls]
+Homepage = "https://omniversodigital.github.io"
+Repository = "https://github.com/omniversodigital/agent-evals-engine"
+Issues = "https://github.com/omniversodigital/agent-evals-engine/issues"
 
 [project.scripts]
 agent-evals = "src.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

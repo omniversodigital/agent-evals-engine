@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/hero-banner.svg" alt="Agent Evals Engine Banner" width="100%" />
+</p>
+
 # 🛡️ Agent Evals Engine
 
 [![CI Pipeline](https://github.com/omniversodigital/agent-evals-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/omniversodigital/agent-evals-engine/actions)
